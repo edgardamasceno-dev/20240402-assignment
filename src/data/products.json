@@ -1,82 +1,165 @@
 [
   {
     "id": "835fed2d-6f8d-4275-a569-8ac09f18386b",
-    "imageUrl": "https://example.com/tshirt-image-0.jpg",
-    "name": "Camiseta Nike Modelo A",
-    "price": 25.99,
-    "sizes": ["P"],
-    "colors": ["Preto"]
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/82fed898-6796-4ece-91e9-307041a954d8/playera-de-fitness-dri-fit-7VM9bj.png",
+    "name": "Nike Dry-FIT",
+    "price": 19.97,
+    "sizes": [
+      "P"
+    ],
+    "colors": [
+      "Preto"
+    ],
+    "isFavourite": false
   },
   {
     "id": "ba0f57e9-00aa-4d2a-a148-7646ed9ad35c",
-    "imageUrl": "https://example.com/tshirt-image-1.jpg",
-    "name": "Camiseta Adidas Modelo B",
+    "imageUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b25ad4caa15f4d418824562d868e8033_9366/Adicolor_Trefoil_Tee_Black_IU2364_21_model.jpg",
+    "name": "Adidas Adicolor Trefoil Tee",
     "price": 30.99,
-    "sizes": ["P", "M"],
-    "colors": ["Preto", "Branco"]
+    "sizes": [
+      "P",
+      "M"
+    ],
+    "colors": [
+      "Preto",
+      "Branco"
+    ],
+    "isFavourite": true
   },
   {
     "id": "21e2122d-3bf1-40a2-b1cd-02f1031547a2",
-    "imageUrl": "https://example.com/tshirt-image-2.jpg",
-    "name": "Camiseta Nike Modelo C",
-    "price": 35.99,
-    "sizes": ["P", "M", "G"],
-    "colors": ["Preto", "Branco", "Vermelho"]
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f852a630-fd5e-4bf1-a919-73fdec087a92/playera-de-fitness-dri-fit-legend-JmKL0d.png",
+    "name": "Nike Dry-FIT Legend",
+    "price": 18.97,
+    "sizes": [
+      "P",
+      "M",
+      "G"
+    ],
+    "colors": [
+      "Preto",
+      "Branco",
+      "Vermelho"
+    ],
+    "isFavourite": false
   },
   {
     "id": "1c76b5e2-d1c1-4500-9c1a-bec68de32f02",
-    "imageUrl": "https://example.com/tshirt-image-3.jpg",
-    "name": "Camiseta Adidas Modelo D",
+    "imageUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9195c9e7f4654efd90002dcdcea75002_9366/Shmoofoil_Not_Eazy_Short_Sleeve_Tee_Black_IU0079_21_model.jpg",
+    "name": "Adidas SHMOOFOIL NOT EAZY SHORT SLEEVE TEE",
     "price": 40.99,
-    "sizes": ["P", "M", "G", "GG"],
-    "colors": ["Preto", "Branco", "Vermelho", "Azul"]
+    "sizes": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "colors": [
+      "Preto",
+      "Branco",
+      "Vermelho",
+      "Azul"
+    ],
+    "isFavourite": false
   },
   {
     "id": "1f14165e-9105-4792-ab03-0548a0aeeede",
-    "imageUrl": "https://example.com/tshirt-image-4.jpg",
-    "name": "Camiseta Nike Modelo E",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/0c64bbaf-6ff5-4d3d-8c5c-7e5aabdfe840/playera-jordan-brand-VTsbvh.png",
+    "name": "Nike Jordan Brand",
     "price": 45.99,
-    "sizes": ["P"],
-    "colors": ["Preto", "Branco", "Vermelho", "Azul", "Verde"]
+    "sizes": [
+      "P"
+    ],
+    "colors": [
+      "Preto",
+      "Branco",
+      "Vermelho",
+      "Azul",
+      "Verde"
+    ],
+    "isFavourite": true
   },
   {
     "id": "f2d503dd-957f-494d-b264-c3213f1c50a6",
-    "imageUrl": "https://example.com/tshirt-image-5.jpg",
-    "name": "Camiseta Adidas Modelo F",
+    "imageUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1857299772324d54938c2e6de238e598_9366/VRCT_Short_Sleeve_Tee_White_IS0186_21_model.jpg",
+    "name": "Adidas VRCT SHORT SLEEVE TEE",
     "price": 50.99,
-    "sizes": ["P", "M"],
-    "colors": ["Preto"]
+    "sizes": [
+      "P",
+      "M"
+    ],
+    "colors": [
+      "Preto"
+    ],
+    "isFavourite": true
   },
   {
     "id": "3905465e-bf07-403e-a300-b26dc097351d",
-    "imageUrl": "https://example.com/tshirt-image-6.jpg",
-    "name": "Camiseta Nike Modelo G",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/945ed1ea-d1c4-43e9-8403-c2f93c7f4d39/playera-de-f%C3%BAtbol-brazil-essential-rlfbZN.png",
+    "name": "Nike Brazil Essential",
     "price": 55.99,
-    "sizes": ["P", "M", "G"],
-    "colors": ["Preto", "Branco"]
+    "sizes": [
+      "P",
+      "M",
+      "G"
+    ],
+    "colors": [
+      "Preto",
+      "Branco"
+    ],
+    "isFavourite": false
   },
   {
     "id": "d3cd704d-2fa7-43ff-a9dd-8add229f2166",
-    "imageUrl": "https://example.com/tshirt-image-7.jpg",
-    "name": "Camiseta Adidas Modelo H",
+    "imageUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7abe87e75d24481592fcce639aba307b_9366/Faux_Leather_Adicolor_3-Stripes_Baseball_Shirt_Green_IZ4047_23_hover_model.jpg",
+    "name": "Adidas FAUX LEATHER ADICOLOR 3-STRIPES BASEBALL SHIRT",
     "price": 60.99,
-    "sizes": ["P", "M", "G", "GG"],
-    "colors": ["Preto", "Branco", "Vermelho"]
+    "sizes": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "colors": [
+      "Preto",
+      "Branco",
+      "Vermelho"
+    ],
+    "isFavourite": false
   },
   {
     "id": "15445658-d08a-477a-9bc7-4ce08f5ca7c1",
-    "imageUrl": "https://example.com/tshirt-image-8.jpg",
-    "name": "Camiseta Nike Modelo I",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/15dc2e8d-84af-4698-aa5f-cbcb7044fd30/playera-tatum-T4b2vJ.png",
+    "name": "Nike Tatum",
     "price": 65.99,
-    "sizes": ["P"],
-    "colors": ["Preto", "Branco", "Vermelho", "Azul"]
+    "sizes": [
+      "P"
+    ],
+    "colors": [
+      "Preto",
+      "Branco",
+      "Vermelho",
+      "Azul"
+    ],
+    "isFavourite": true
   },
   {
     "id": "b178d13d-16e2-403b-b638-9e6f9a25482d",
-    "imageUrl": "https://example.com/tshirt-image-9.jpg",
-    "name": "Camiseta Adidas Modelo J",
+    "imageUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f25674bcfd324137a776af65017ce68a_9366/Shmoofoil_Knit_Sweater_Gender_Neutral_Black_IC1879_21_model.jpg",
+    "name": "Adidas SHMOOFOIL KNIT SWEATER (GENDER NEUTRAL)",
     "price": 70.99,
-    "sizes": ["P", "M"],
-    "colors": ["Preto", "Branco", "Vermelho", "Azul", "Verde"]
+    "sizes": [
+      "P",
+      "M"
+    ],
+    "colors": [
+      "Preto",
+      "Branco",
+      "Vermelho",
+      "Azul",
+      "Verde"
+    ],
+    "isFavourite": false
   }
 ]
