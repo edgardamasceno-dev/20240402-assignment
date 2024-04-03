@@ -1,0 +1,82 @@
+[
+  {
+    "id": "835fed2d-6f8d-4275-a569-8ac09f18386b",
+    "imageUrl": "https://example.com/tshirt-image-0.jpg",
+    "name": "Camiseta Nike Modelo A",
+    "price": 25.99,
+    "sizes": ["P"],
+    "colors": ["Preto"]
+  },
+  {
+    "id": "ba0f57e9-00aa-4d2a-a148-7646ed9ad35c",
+    "imageUrl": "https://example.com/tshirt-image-1.jpg",
+    "name": "Camiseta Adidas Modelo B",
+    "price": 30.99,
+    "sizes": ["P", "M"],
+    "colors": ["Preto", "Branco"]
+  },
+  {
+    "id": "21e2122d-3bf1-40a2-b1cd-02f1031547a2",
+    "imageUrl": "https://example.com/tshirt-image-2.jpg",
+    "name": "Camiseta Nike Modelo C",
+    "price": 35.99,
+    "sizes": ["P", "M", "G"],
+    "colors": ["Preto", "Branco", "Vermelho"]
+  },
+  {
+    "id": "1c76b5e2-d1c1-4500-9c1a-bec68de32f02",
+    "imageUrl": "https://example.com/tshirt-image-3.jpg",
+    "name": "Camiseta Adidas Modelo D",
+    "price": 40.99,
+    "sizes": ["P", "M", "G", "GG"],
+    "colors": ["Preto", "Branco", "Vermelho", "Azul"]
+  },
+  {
+    "id": "1f14165e-9105-4792-ab03-0548a0aeeede",
+    "imageUrl": "https://example.com/tshirt-image-4.jpg",
+    "name": "Camiseta Nike Modelo E",
+    "price": 45.99,
+    "sizes": ["P"],
+    "colors": ["Preto", "Branco", "Vermelho", "Azul", "Verde"]
+  },
+  {
+    "id": "f2d503dd-957f-494d-b264-c3213f1c50a6",
+    "imageUrl": "https://example.com/tshirt-image-5.jpg",
+    "name": "Camiseta Adidas Modelo F",
+    "price": 50.99,
+    "sizes": ["P", "M"],
+    "colors": ["Preto"]
+  },
+  {
+    "id": "3905465e-bf07-403e-a300-b26dc097351d",
+    "imageUrl": "https://example.com/tshirt-image-6.jpg",
+    "name": "Camiseta Nike Modelo G",
+    "price": 55.99,
+    "sizes": ["P", "M", "G"],
+    "colors": ["Preto", "Branco"]
+  },
+  {
+    "id": "d3cd704d-2fa7-43ff-a9dd-8add229f2166",
+    "imageUrl": "https://example.com/tshirt-image-7.jpg",
+    "name": "Camiseta Adidas Modelo H",
+    "price": 60.99,
+    "sizes": ["P", "M", "G", "GG"],
+    "colors": ["Preto", "Branco", "Vermelho"]
+  },
+  {
+    "id": "15445658-d08a-477a-9bc7-4ce08f5ca7c1",
+    "imageUrl": "https://example.com/tshirt-image-8.jpg",
+    "name": "Camiseta Nike Modelo I",
+    "price": 65.99,
+    "sizes": ["P"],
+    "colors": ["Preto", "Branco", "Vermelho", "Azul"]
+  },
+  {
+    "id": "b178d13d-16e2-403b-b638-9e6f9a25482d",
+    "imageUrl": "https://example.com/tshirt-image-9.jpg",
+    "name": "Camiseta Adidas Modelo J",
+    "price": 70.99,
+    "sizes": ["P", "M"],
+    "colors": ["Preto", "Branco", "Vermelho", "Azul", "Verde"]
+  }
+]
