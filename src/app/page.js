@@ -1,4 +1,5 @@
 import { list } from "@/actions/products";
+import { Modal } from "@/components/Modal";
 import { ProductList } from "@/components/Product";
 import { Suspense } from 'react';
 export default async function Home() {
@@ -8,6 +9,7 @@ export default async function Home() {
       <Suspense fallback={<h1>Carregando lista de produtos...</h1>}>
         <ProductList products={data.products} />
       </Suspense>
+      <Modal visible={true}><h1>Modal</h1></Modal>
     </main>
   );
 }
