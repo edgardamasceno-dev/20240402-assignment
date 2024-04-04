@@ -35,11 +35,11 @@ export const ColorSelector = ({ colors, label, color = 'Nenhum', onColorChange }
 
   return (
     <div className='flex flex-col gap-2'>
-      <label className='text-slate-500 font-light text-sm'>{label}
+      <p className='text-slate-500 font-light text-sm'>{label}
         <span className='font-semibold text-orange-500'>
           {" "}{selectedColor !== 'nenhum' ? colorNameMap[selectedColor] || selectedColor : 'Nenhum'}
         </span>
-      </label>
+      </p>
       <div className="flex space-x-2">
         {colors.map((color) => (
           <button

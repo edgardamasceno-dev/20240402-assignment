@@ -15,7 +15,7 @@ export const Filter = ({
     currentPrice = Infinity,
 }) => {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto border-b-[1px] border-slate-200">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
                 <div className="p-4">
                     <Autocomplete
@@ -38,7 +38,7 @@ export const Filter = ({
                     <ColorSelector
                         label="Selecione uma Cor:"
                         colors={colors}
-                        color={'Azul'}
+                        color={currentColor}
                         onColorChange={console.log}
                     />
                 </div>

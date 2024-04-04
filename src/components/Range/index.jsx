@@ -25,7 +25,7 @@ export const Range = ({ label, min, max, current = Infinity, onRangeChange }) =>
                 onMouseUp={handleFinalChange}
                 onKeyUp={handleFinalChange}
                 className="appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-md [&::-webkit-slider-runnable-track]:bg-slate-100 border-[1px] border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[28px] [&::-webkit-slider-thumb]:w-[28px] [&::-webkit-slider-thumb]:rounded-md [&::-webkit-slider-thumb]:bg-orange-500"
-                name="range"
+                id="range"
             />
         </div>
     );

@@ -41,10 +41,12 @@ export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...
 
     return (
         <div className='flex flex-col gap-2 relative' ref={wrapperRef}>
-            <label className='text-slate-500 font-light text-sm'>{label}</label>
+            <label htmlFor='name' className='text-slate-500 font-light text-sm'>{label}</label>
             <div className="relative">
                 <input
                     type="text"
+                    id="name"
+                    autoComplete='off'
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     placeholder={placeholder}

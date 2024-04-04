@@ -27,11 +27,11 @@ export const SizeSelector = ({ sizes, label, size = 'Nenhum', onSizeChange }) =>
 
     return (
         <div className='flex flex-col gap-2'>
-            <label className='text-slate-500 font-light text-sm'>{label}
+            <p className='text-slate-500 font-light text-sm'>{label}
                 <span className='font-semibold text-orange-500'>
                     {" "}{displaySize}
                 </span>
-            </label>
+            </p>
             <div className="flex space-x-2">
                 {sizes.map(size => (
                     <button
