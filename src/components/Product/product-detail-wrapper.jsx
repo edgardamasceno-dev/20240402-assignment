@@ -1,11 +1,9 @@
-// ProductDetailsWrapper.js
 'use client';
 import { useEffect, useState } from 'react';
 import { ProductDetails } from './';
 
 export const ProductDetailsWrapper = ({ id }) => {
     const [product, setProduct] = useState(null);
-
     useEffect(() => {
         const fetchProduct = async () => {
             const response = await fetch(`/api/products/${id}`);

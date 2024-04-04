@@ -1,8 +1,10 @@
 import { clsx } from 'clsx';
 import Image from 'next/image';
+import Link from 'next/link';
 import { AiFillHeart, AiOutlineArrowLeft, AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 
-export const ProductDetails = ({ product, back }) => {
+export const ProductDetails = ({ product }) => {
+
     if (!product) return <div>Loading...</div>;
 
     const colorMap = {
@@ -16,7 +18,7 @@ export const ProductDetails = ({ product, back }) => {
     return (
         <div className="flex flex-col gap-2 min-w-[340px] w-full h-full mt-2">
             <div className="relative">
-                <Image src={product.imageUrl} alt={product.name} layout="responsive" width={400} height={400} priority className='rounded-md max-h-[55svh] object-cover' />
+                <Image src={product.imageUrl} alt={product.name} width={400} height={400} priority className='rounded-md w-full max-h-[55svh] object-cover' />
                 <div className="absolute top-0 right-0 m-2">
                     {product.isFavourite ? <AiFillHeart className='w-6 h-6 text-orange-500' /> : <AiOutlineHeart className='w-6 h-6 text-orange-500' />}
                 </div>
@@ -44,10 +46,12 @@ export const ProductDetails = ({ product, back }) => {
                         </div>
                     </div>
                     <div className='mt-2 pt-2 border-t-[1px] border-slate-100 flex flex-col-reverse lg:flex-row gap-2'>
-                        <div className="w-full text-sm rounded border-[2px] border-orange-500 text-orange-500 px-4 py-2 flex items-center justify-center cursor-pointer hover:border-orange-600 hover:text-orange-600 box-border" onClick={back}>
-                            <AiOutlineArrowLeft className='mr-2 w-6 h-6' />
-                            Voltar
-                        </div>
+                        <Link href="/">
+                            <div className="w-full text-sm rounded border-[2px] border-orange-500 text-orange-500 px-4 py-2 flex items-center justify-center cursor-pointer hover:border-orange-600 hover:text-orange-600 box-border" >
+                                <AiOutlineArrowLeft className='mr-2 w-6 h-6' />
+                                Voltar
+                            </div>
+                        </Link>
                         <div className="w-full text-sm rounded bg-orange-500 text-white px-4 py-2 flex items-center justify-center cursor-pointer hover:bg-orange-600">
                             Adicionar!
                             <AiOutlineShoppingCart className='ml-2 w-6 h-6' />

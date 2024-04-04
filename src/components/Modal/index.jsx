@@ -1,13 +1,23 @@
 'use client';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { IoCloseOutline } from "react-icons/io5";
 
 export const Modal = ({ visible, children }) => {
     const [isOpen, setIsOpen] = useState(visible);
+    const pathname = usePathname()
+    const searchParams = useSearchParams()
 
     useEffect(() => {
         setIsOpen(visible);
     }, [visible]);
+
+    useEffect(() => {
+        const path = pathname + searchParams.toString();
+        if (path === '/') {
+            handleClose();
+        }
+    }, [pathname, searchParams])
 
     const handleClose = () => {
         setIsOpen(false);
