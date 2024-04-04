@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 
 export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...', onTextChange }) => {
     const [inputValue, setInputValue] = useState(text);
@@ -6,25 +7,23 @@ export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...
     const [isOpen, setIsOpen] = useState(false);
     const wrapperRef = useRef(null);
 
-    const handleChange = (event) => {
-        const value = event.target.value;
-        setInputValue(value);
-        onTextChange(value);
-        setIsOpen(true);
-
-        if (!value) {
+    useEffect(() => {
+        if (!inputValue) {
             setFilteredItems([]);
+            setIsOpen(false);
         } else {
             const filtered = items.filter(item =>
-                item.toLowerCase().includes(value.toLowerCase())
+                item.toLowerCase().includes(inputValue.toLowerCase())
             );
             setFilteredItems(filtered);
+            setIsOpen(true);
         }
-    };
+    }, [inputValue, items]);
 
     const handleSelect = (value) => {
         setInputValue(value);
         setIsOpen(false);
+        onTextChange(value);
     };
 
     useEffect(() => {
@@ -38,24 +37,30 @@ export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [wrapperRef]);
+    }, []);
 
     return (
         <div className='flex flex-col gap-2 relative' ref={wrapperRef}>
-            <label className='text-slate-500 font-light text-sm'>
-                {label}
-                <span className='font-semibold text-orange-500'> {inputValue}</span>
-            </label>
-            <input
-                type="text"
-                value={inputValue}
-                placeholder={placeholder}
-                onChange={handleChange}
-                className="text-sm text-slate-600 placeholder-slate-200 h-7 focus:outline-none focus:ring-2 focus:ring-orange-500 border-[1px] border-slate-200 rounded-full p-2"
-                onFocus={() => filteredItems.length > 0 && setIsOpen(true)}
-            />
+            <label className='text-slate-500 font-light text-sm'>{label}</label>
+            <div className="relative">
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    placeholder={placeholder}
+                    className="w-full text-sm text-slate-600 placeholder-slate-200 h-7 focus:outline-none focus:ring-2 focus:ring-orange-500 border-[1px] border-slate-200 rounded-md p-2 pl-10 pr-10"
+                />
+                <AiOutlineClose
+                    onClick={() => setInputValue('')}
+                    className="absolute left-[2px] top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-orange-500 cursor-pointer rounded-md bg-none w-6 h-6 p-1 active:bg-orange-500 active:text-white duration-200 transition-all"
+                />
+                <AiOutlineSearch
+                    onClick={() => onTextChange(inputValue)}
+                    className="absolute right-[2px] top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-orange-500 cursor-pointer rounded-md bg-none w-6 h-6 p-1 active:bg-orange-500 active:text-white duration-200 transition-all"
+                />
+            </div>
             {isOpen && filteredItems.length > 0 && (
-                <ul className="border rounded mt-16 max-h-40 overflow-auto absolute w-full z-10 bg-white shadow-md">
+                <ul className="border rounded mt-1 max-h-40 overflow-auto absolute w-full z-10 bg-white shadow-md">
                     {filteredItems.map((item, index) => (
                         <li
                             key={index}

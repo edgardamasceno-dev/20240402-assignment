@@ -38,10 +38,10 @@ export const SizeSelector = ({ sizes, label, size = 'Nenhum', onSizeChange }) =>
                         key={size}
                         onClick={() => handleSizeChange(size)}
                         className={clsx(
-                            'select-none border rounded-full text-xs flex justify-center items-center px-2 py-1 w-7 h-7 font-light',
+                            'focus:outline-none focus:ring-2 focus:ring-orange-500 select-none border-[2px] rounded-md text-xs flex justify-center items-center px-2 py-1 w-7 h-7 font-light',
                             {
-                                'bg-orange-500 text-white border-orange-500': selectedSize === size.toLowerCase(),
-                                'hover:bg-orange-500 hover:text-white hover:border-orange-500': selectedSize !== size.toLowerCase(),
+                                'bg-orange-500 text-white border-orange-500 font-semibold': selectedSize === size.toLowerCase(),
+                                'hover:text-orange-500 hover:border-orange-500': selectedSize !== size.toLowerCase(),
                             }
                         )}
                     >
@@ -51,7 +51,7 @@ export const SizeSelector = ({ sizes, label, size = 'Nenhum', onSizeChange }) =>
                 <button
                     onClick={handleSelectNone}
                     className={clsx(
-                        'select-none border rounded-full flex justify-center items-center w-7 h-7',
+                        'select-none border rounded-md flex justify-center items-center w-7 h-7 focus:outline-none focus:ring-2 focus:ring-orange-500',
                         {
                             'bg-orange-500 border-orange-500 text-white': selectedSize === "nenhum",
                             'border-slate-200 text-slate-200 hover:border-orange-500 hover:text-orange-500': selectedSize !== "nenhum",

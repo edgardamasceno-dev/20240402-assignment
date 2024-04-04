@@ -13,7 +13,6 @@ export const Filter = ({
     currentSize = 'Nenhum',
     currentColor = 'Nenhum',
     currentPrice = Infinity,
-    onFilterChange = () => console.log
 }) => {
     return (
         <div className="container mx-auto">
@@ -23,7 +22,7 @@ export const Filter = ({
                         items={names || []}
                         label="Pesquisar Nome:"
                         text={currentName}
-                        onTextChange={onFilterChange}
+                        onTextChange={console.log}
                     />
                 </div>
                 <div className="p-4">
@@ -32,7 +31,7 @@ export const Filter = ({
                         min={Math.ceil(minPrice)}
                         max={Math.ceil(maxPrice)}
                         current={Math.ceil(currentPrice)}
-                        onRangeChange={onFilterChange}
+                        onRangeChange={console.log}
                     />
                 </div>
                 <div className="p-4">
@@ -40,7 +39,7 @@ export const Filter = ({
                         label="Selecione uma Cor:"
                         colors={colors}
                         color={'Azul'}
-                        onColorChange={onFilterChange}
+                        onColorChange={console.log}
                     />
                 </div>
                 <div className="p-4">
@@ -48,7 +47,7 @@ export const Filter = ({
                         label="Escolha o tamanho:"
                         sizes={sizes}
                         size={currentSize}
-                        onSizeChange={onFilterChange}
+                        onSizeChange={console.log}
                     />
                 </div>
             </div>
