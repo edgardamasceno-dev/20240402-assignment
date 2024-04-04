@@ -39,7 +39,7 @@ export const Filter = ({
                     <ColorSelector
                         label="Selecione uma Cor:"
                         colors={colors}
-                        color={currentColor}
+                        color={'Azul'}
                         onColorChange={onFilterChange}
                     />
                 </div>

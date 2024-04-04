@@ -6,7 +6,16 @@ export default async function Home() {
   const data = await list();
   return (
     <main className="flex flex-col items-center justify-between py-4 px-0">
-      <Filter />
+      <Filter
+        names={data.names}
+        currentName={null || ''}
+        colors={data.colors}
+        currentColor={null || 'Nenhum'}
+        sizes={data.sizes}
+        currentSize={'g' || 'Nenhum'}
+        minPrice={null || 0}
+        maxPrice={null || 199}
+      />
       <Suspense fallback={<h1>Carregando lista de produtos...</h1>}>
         <ProductList products={data.products} />
       </Suspense>
