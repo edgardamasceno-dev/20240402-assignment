@@ -13,8 +13,6 @@ export async function GET(request) {
   const size = searchParams.get('size');
   const color = searchParams.get('color');
 
-
-
   const productsData = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 
   const filteredProducts = productsData.filter(product => {

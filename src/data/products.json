@@ -1,7 +1,7 @@
 [
   {
     "id": "835fed2d-6f8d-4275-a569-8ac09f18386b",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/82fed898-6796-4ece-91e9-307041a954d8/playera-de-fitness-dri-fit-7VM9bj.png",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/82fed898-6796-4ece-91e9-307041a954d8/playera-de-fitness-dri-fit-7VM9bj.png",
     "name": "Nike Dry-FIT",
     "price": 19.97,
     "sizes": [
@@ -29,7 +29,7 @@
   },
   {
     "id": "21e2122d-3bf1-40a2-b1cd-02f1031547a2",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f852a630-fd5e-4bf1-a919-73fdec087a92/playera-de-fitness-dri-fit-legend-JmKL0d.png",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/f852a630-fd5e-4bf1-a919-73fdec087a92/playera-de-fitness-dri-fit-legend-JmKL0d.png",
     "name": "Nike Dry-FIT Legend",
     "price": 18.97,
     "sizes": [
@@ -96,7 +96,7 @@
   },
   {
     "id": "3905465e-bf07-403e-a300-b26dc097351d",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/945ed1ea-d1c4-43e9-8403-c2f93c7f4d39/playera-de-f%C3%BAtbol-brazil-essential-rlfbZN.png",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/945ed1ea-d1c4-43e9-8403-c2f93c7f4d39/playera-de-f%C3%BAtbol-brazil-essential-rlfbZN.png",
     "name": "Nike Brazil Essential",
     "price": 55.99,
     "sizes": [
@@ -130,7 +130,7 @@
   },
   {
     "id": "15445658-d08a-477a-9bc7-4ce08f5ca7c1",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/15dc2e8d-84af-4698-aa5f-cbcb7044fd30/playera-tatum-T4b2vJ.png",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/15dc2e8d-84af-4698-aa5f-cbcb7044fd30/playera-tatum-T4b2vJ.png",
     "name": "Nike Tatum",
     "price": 65.99,
     "sizes": [
