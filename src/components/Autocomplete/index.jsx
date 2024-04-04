@@ -8,7 +8,7 @@ export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...
     const wrapperRef = useRef(null);
 
     useEffect(() => {
-        if (!inputValue) {
+        if (!inputValue.trim()) {
             setFilteredItems([]);
             setIsOpen(false);
         } else {
@@ -24,6 +24,23 @@ export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...
         setInputValue(value);
         setIsOpen(false);
         onTextChange(value);
+    };
+
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    const handleSearchClick = () => {
+        if (inputValue.trim()) {
+            onTextChange(inputValue.trim());
+        }
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter' && inputValue.trim()) {
+            onTextChange(inputValue.trim());
+            setIsOpen(false);
+        }
     };
 
     useEffect(() => {
@@ -44,25 +61,26 @@ export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...
             <label htmlFor='name' className='text-slate-500 font-light text-sm'>{label}</label>
             <div className="relative">
                 <input
-                    type="text"
                     id="name"
+                    type="text"
                     autoComplete='off'
                     value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    onChange={handleInputChange}
+                    onKeyDown={handleKeyDown}
                     placeholder={placeholder}
                     className="w-full text-sm text-slate-600 placeholder-slate-200 h-7 focus:outline-none focus:ring-2 focus:ring-orange-500 border-[1px] border-slate-200 rounded-md p-2 pl-10 pr-10"
                 />
                 <AiOutlineClose
                     onClick={() => setInputValue('')}
-                    className="absolute left-[2px] top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-orange-500 cursor-pointer rounded-md bg-none w-6 h-6 p-1 active:bg-orange-500 active:text-white duration-200 transition-all"
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-orange-500 cursor-pointer rounded-md bg-none w-6 h-6 p-1"
                 />
                 <AiOutlineSearch
-                    onClick={() => onTextChange(inputValue)}
-                    className="absolute right-[2px] top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-orange-500 cursor-pointer rounded-md bg-none w-6 h-6 p-1 active:bg-orange-500 active:text-white duration-200 transition-all"
+                    onClick={handleSearchClick}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-orange-500 cursor-pointer rounded-md bg-none w-6 h-6 p-1"
                 />
             </div>
             {isOpen && filteredItems.length > 0 && (
-                <ul className="border rounded mt-1 max-h-40 overflow-auto absolute w-full z-10 bg-white shadow-md">
+                <ul className="border rounded-md mt-16 absolute w-full z-10 bg-white shadow-md">
                     {filteredItems.map((item, index) => (
                         <li
                             key={index}
