@@ -46,28 +46,30 @@ export const ColorSelector = ({ colors, label, color = 'Nenhum', onColorChange }
             key={color}
             onClick={() => handleSelectColor(color)}
             className={clsx(
-              'focus:outline-none focus:ring-2 focus:ring-violet-800 hover:border-violet-800 h-7 w-7 border-[2px] rounded-md flex justify-center items-center',
+              'focus:outline-none focus:ring-2 focus:ring-orange-500 hover:border-orange-500 h-7 w-7 border-[2px] rounded-md flex justify-center items-center',
               colorMap[color.toLowerCase()],
               {
-                'border-2 border-violet-800': selectedColor === color.toLowerCase(),
+                'border-2 border-orange-500': selectedColor === color.toLowerCase(),
                 'border slate-200': selectedColor !== color.toLowerCase(),
               }
             )}
+            aria-label={colorNameMap[color.toLowerCase()] || color}
           >
           </button>
         ))}
         <button
           onClick={() => handleSelectColor('Nenhum')}
           className={clsx(
-            'h-7 w-7 rounded-md border-[2px] hover:border-violet-800 focus:outline-none focus:ring-2 focus:ring-violet-800 flex justify-center items-center',
+            'h-7 w-7 rounded-md border-[2px] hover:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 flex justify-center items-center',
             {
-              'border-violet-800 bg-violet-800': selectedColor === 'nenhum',
+              'border-orange-500 bg-orange-500': selectedColor === 'nenhum',
               'border slate-200': selectedColor !== 'nenhum',
             }
           )}
+          aria-label="Remover seleção de cor"
         >
           <AiOutlineClose className={clsx(
-            'text-slate-200 hover:text-violet-800',
+            'text-slate-200 hover:text-orange-500',
             {
               'text-white': selectedColor === 'nenhum',
             }

@@ -37,6 +37,7 @@ export const SizeSelector = ({ sizes, label, size = 'Nenhum', onSizeChange }) =>
                     <button
                         key={size}
                         onClick={() => handleSizeChange(size)}
+                        aria-pressed={selectedSize === size.toLowerCase()}
                         className={clsx(
                             'focus:outline-none focus:ring-2 focus:ring-violet-800 select-none border-[2px] rounded-md text-xs flex justify-center items-center px-2 py-1 w-7 h-7 font-light',
                             {
@@ -50,6 +51,7 @@ export const SizeSelector = ({ sizes, label, size = 'Nenhum', onSizeChange }) =>
                 ))}
                 <button
                     onClick={handleSelectNone}
+                    aria-label="Deselecionar tamanho"
                     className={clsx(
                         'select-none border rounded-md flex justify-center items-center w-7 h-7 focus:outline-none focus:ring-2 focus:ring-violet-800',
                         {
@@ -60,6 +62,7 @@ export const SizeSelector = ({ sizes, label, size = 'Nenhum', onSizeChange }) =>
                 >
                     <AiOutlineClose />
                 </button>
+
             </div>
         </div>
     );
