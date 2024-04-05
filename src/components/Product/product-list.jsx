@@ -11,7 +11,7 @@ export const ProductList = ({ products }) => {
                 <p className="text-md md:text-xl text-slate-400 mt-2">
                     Tente ajustar os filtros para descobrir mais opções.
                 </p>
-                <Link prefetch href="/" className="mt-4 text-sm rounded border border-orange-500 text-orange-500 px-4 py-2 hover:bg-orange-500 hover:text-white transition-colors">
+                <Link prefetch href="/" className="mt-4 text-sm rounded border border-violet-800 text-violet-800 px-4 py-2 hover:bg-violet-800 hover:text-white transition-colors">
                     Limpar Filtros
                 </Link>
             </div>

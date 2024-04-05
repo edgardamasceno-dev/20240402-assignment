@@ -22,16 +22,16 @@ export const ProductCard = ({ product, priority = false }) => {
           <span className='font-thin text-slate-500 text-xs'>Tamanhos Disponíveis</span>
           <div className="flex">
             {product.sizes.map(size => (
-              <span key={size} className="mr-2 h-5 w-5 border hover:border-2 hover:border-orange-500 rounded text-sm flex justify-center items-center text-slate-600">{size}</span>
+              <span key={size} className="mr-2 h-5 w-5 border hover:border-2 hover:border-violet-800 rounded text-sm flex justify-center items-center text-slate-600">{size}</span>
             ))}
           </div>
           <span className='font-thin text-slate-500 text-xs'>Cores Disponíveis</span>
           <div className="flex">
             {product.colors.map(color => (
-              <span key={color} className={clsx('mr-2 h-5 w-5 border hover:border-2 hover:border-orange-500 rounded text-sm', colorMap[color.toString().toLowerCase()])}> </span>
+              <span key={color} className={clsx('mr-2 h-5 w-5 border hover:border-2 hover:border-violet-800 rounded text-sm', colorMap[color.toString().toLowerCase()])}> </span>
             ))}
             <span className='flex-1'></span>
-            {product.isFavourite ? <AiFillHeart className='w-5 h-5 text-orange-500 hover:text-orange-600' /> : <AiOutlineHeart className='w-6 h-6 text-orange-500 hover:text-orange-600' />}
+            {product.isFavourite ? <AiFillHeart className='w-5 h-5 text-violet-800 hover:text-violet-800' /> : <AiOutlineHeart className='w-6 h-6 text-violet-800 hover:text-violet-800' />}
           </div>
         </div>
       </div>

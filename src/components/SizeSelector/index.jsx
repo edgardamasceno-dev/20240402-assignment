@@ -28,7 +28,7 @@ export const SizeSelector = ({ sizes, label, size = 'Nenhum', onSizeChange }) =>
     return (
         <div className='flex flex-col gap-2'>
             <p className='text-slate-500 font-light text-sm'>{label}
-                <span className='font-semibold text-orange-500'>
+                <span className='font-semibold text-violet-800'>
                     {" "}{displaySize}
                 </span>
             </p>
@@ -38,10 +38,10 @@ export const SizeSelector = ({ sizes, label, size = 'Nenhum', onSizeChange }) =>
                         key={size}
                         onClick={() => handleSizeChange(size)}
                         className={clsx(
-                            'focus:outline-none focus:ring-2 focus:ring-orange-500 select-none border-[2px] rounded-md text-xs flex justify-center items-center px-2 py-1 w-7 h-7 font-light',
+                            'focus:outline-none focus:ring-2 focus:ring-violet-800 select-none border-[2px] rounded-md text-xs flex justify-center items-center px-2 py-1 w-7 h-7 font-light',
                             {
-                                'bg-orange-500 text-white border-orange-500 font-semibold': selectedSize === size.toLowerCase(),
-                                'hover:text-orange-500 hover:border-orange-500': selectedSize !== size.toLowerCase(),
+                                'bg-violet-800 text-white border-violet-800 font-semibold': selectedSize === size.toLowerCase(),
+                                'hover:text-violet-800 hover:border-violet-800': selectedSize !== size.toLowerCase(),
                             }
                         )}
                     >
@@ -51,10 +51,10 @@ export const SizeSelector = ({ sizes, label, size = 'Nenhum', onSizeChange }) =>
                 <button
                     onClick={handleSelectNone}
                     className={clsx(
-                        'select-none border rounded-md flex justify-center items-center w-7 h-7 focus:outline-none focus:ring-2 focus:ring-orange-500',
+                        'select-none border rounded-md flex justify-center items-center w-7 h-7 focus:outline-none focus:ring-2 focus:ring-violet-800',
                         {
-                            'bg-orange-500 border-orange-500 text-white': selectedSize === "nenhum",
-                            'border-slate-200 text-slate-200 hover:border-orange-500 hover:text-orange-500': selectedSize !== "nenhum",
+                            'bg-violet-800 border-violet-800 text-white': selectedSize === "nenhum",
+                            'border-slate-200 text-slate-200 hover:border-violet-800 hover:text-violet-800': selectedSize !== "nenhum",
                         }
                     )}
                 >

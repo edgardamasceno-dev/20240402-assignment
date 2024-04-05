@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const BrandLink = () => (
-    <Link prefetch href="/" className='text-3xl font-bold text-orange-500 h-12 flex justify-center items-center'>
+    <Link prefetch href="/" className='text-3xl font-bold text-violet-800 h-12 flex justify-center items-center'>
         camisetei STORE
     </Link>
 );

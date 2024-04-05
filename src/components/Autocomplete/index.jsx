@@ -96,15 +96,15 @@ export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...
                     onChange={handleInputChange}
                     onKeyDown={handleKeyDown}
                     placeholder={placeholder}
-                    className="w-full text-sm text-slate-600 placeholder-slate-200 h-7 focus:outline-none focus:ring-2 focus:ring-orange-500 border-[1px] border-slate-200 rounded-md p-2 pl-10 pr-10"
+                    className="w-full text-sm text-slate-600 placeholder-slate-200 h-7 focus:outline-none focus:ring-2 focus:ring-violet-800 border-[1px] border-slate-200 rounded-md p-2 pl-10 pr-10"
                 />
                 <AiOutlineClose
                     onClick={handleResetClick}
-                    className="absolute left-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-orange-500 cursor-pointer rounded-md bg-none w-6 h-6 p-1"
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-violet-800 cursor-pointer rounded-md bg-none w-6 h-6 p-1"
                 />
                 <AiOutlineSearch
                     onClick={handleSearchClick}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-orange-500 cursor-pointer rounded-md bg-none w-6 h-6 p-1"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-violet-800 cursor-pointer rounded-md bg-none w-6 h-6 p-1"
                 />
             </div>
             {isOpen && filteredItems.length > 0 && (
@@ -113,7 +113,7 @@ export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...
                         <li
                             key={index}
                             onClick={() => handleSelect(item)}
-                            className="px-2 py-1 text-sm text-slate-600 hover:bg-orange-500 hover:text-white cursor-pointer"
+                            className="px-2 py-1 text-sm text-slate-600 hover:bg-violet-800 hover:text-white cursor-pointer"
                         >
                             {item}
                         </li>

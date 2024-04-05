@@ -14,7 +14,7 @@ export const Range = ({ label, min, max, current = Infinity, onRangeChange }) =>
     return (
         <div className="flex flex-col space-y-2">
             <label htmlFor="range" className='text-slate-500 font-light text-sm'>{label}
-                <span className='font-semibold text-orange-500'> R$ {value}</span>
+                <span className='font-semibold text-violet-800'> R$ {value}</span>
             </label>
             <input
                 type="range"
@@ -24,7 +24,7 @@ export const Range = ({ label, min, max, current = Infinity, onRangeChange }) =>
                 onChange={handleChange}
                 onMouseUp={handleFinalChange}
                 onKeyUp={handleFinalChange}
-                className="appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-md [&::-webkit-slider-runnable-track]:bg-slate-100 border-[1px] border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[25px] [&::-webkit-slider-thumb]:w-[25px] [&::-webkit-slider-thumb]:rounded-md [&::-webkit-slider-thumb]:bg-orange-500"
+                className="appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-md [&::-webkit-slider-runnable-track]:bg-slate-100 border-[1px] border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-800 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[25px] [&::-webkit-slider-thumb]:w-[25px] [&::-webkit-slider-thumb]:rounded-md [&::-webkit-slider-thumb]:bg-violet-800"
                 id="range"
             />
         </div>
