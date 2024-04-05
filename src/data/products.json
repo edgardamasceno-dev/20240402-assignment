@@ -1,7 +1,7 @@
 [
   {
     "id": "835fed2d-6f8d-4275-a569-8ac09f18386b",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_500,f_auto/t_product_v1/82fed898-6796-4ece-91e9-307041a954d8/playera-de-fitness-dri-fit-7VM9bj.png",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/82fed898-6796-4ece-91e9-307041a954d8/playera-de-fitness-dri-fit-7VM9bj.png",
     "name": "Nike Dry-Fit",
     "price": 19.97,
     "sizes": [
@@ -14,7 +14,7 @@
   },
   {
     "id": "ba0f57e9-00aa-4d2a-a148-7646ed9ad35c",
-    "imageUrl": "https://assets.adidas.com/images/h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/b25ad4caa15f4d418824562d868e8033_9366/Adicolor_Trefoil_Tee_Black_IU2364_21_model.jpg",
+    "imageUrl": "https://assets.adidas.com/images/h_400,f_auto,q_auto,fl_lossy,c_fill,g_auto/b25ad4caa15f4d418824562d868e8033_9366/Adicolor_Trefoil_Tee_Black_IU2364_21_model.jpg",
     "name": "Adidas Adicolor Trefoil Tee",
     "price": 30.99,
     "sizes": [
@@ -29,7 +29,7 @@
   },
   {
     "id": "21e2122d-3bf1-40a2-b1cd-02f1031547a2",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_500,f_auto/t_product_v1/f852a630-fd5e-4bf1-a919-73fdec087a92/playera-de-fitness-dri-fit-legend-JmKL0d.png",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/f852a630-fd5e-4bf1-a919-73fdec087a92/playera-de-fitness-dri-fit-legend-JmKL0d.png",
     "name": "Nike Dry-Fit Legend",
     "price": 18.97,
     "sizes": [
@@ -45,8 +45,8 @@
     "isFavourite": false
   },
   {
-    "id": "1c76b5e2-d1c1-4500-9c1a-bec68de32f02",
-    "imageUrl": "https://assets.adidas.com/images/h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/9195c9e7f4654efd90002dcdcea75002_9366/Shmoofoil_Not_Eazy_Short_Sleeve_Tee_Black_IU0079_21_model.jpg",
+    "id": "1c76b5e2-d1c1-4400-9c1a-bec68de32f02",
+    "imageUrl": "https://assets.adidas.com/images/h_400,f_auto,q_auto,fl_lossy,c_fill,g_auto/9195c9e7f4654efd90002dcdcea75002_9366/Shmoofoil_Not_Eazy_Short_Sleeve_Tee_Black_IU0079_21_model.jpg",
     "name": "Adidas Shmoofoil Not Eazy Short Sleeve Tee",
     "price": 40.99,
     "sizes": [
@@ -65,7 +65,7 @@
   },
   {
     "id": "1f14165e-9105-4792-ab03-0548a0aeeede",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_500,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/0c64bbaf-6ff5-4d3d-8c5c-7e5aabdfe840/playera-jordan-brand-VTsbvh.png",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/0c64bbaf-6ff5-4d3d-8c5c-7e5aabdfe840/playera-jordan-brand-VTsbvh.png",
     "name": "Nike Jordan Brand",
     "price": 45.99,
     "sizes": [
@@ -82,7 +82,7 @@
   },
   {
     "id": "f2d503dd-957f-494d-b264-c3213f1c50a6",
-    "imageUrl": "https://assets.adidas.com/images/h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/1857299772324d54938c2e6de238e598_9366/VRCT_Short_Sleeve_Tee_White_IS0186_21_model.jpg",
+    "imageUrl": "https://assets.adidas.com/images/h_400,f_auto,q_auto,fl_lossy,c_fill,g_auto/1857299772324d54938c2e6de238e598_9366/VRCT_Short_Sleeve_Tee_White_IS0186_21_model.jpg",
     "name": "Adidas Vrct Short Sleeve Tee",
     "price": 50.99,
     "sizes": [
@@ -95,8 +95,8 @@
     "isFavourite": true
   },
   {
-    "id": "3905465e-bf07-403e-a500-b26dc097351d",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_500,f_auto/t_product_v1/945ed1ea-d1c4-43e9-8403-c2f93c7f4d39/playera-de-f%C3%BAtbol-brazil-essential-rlfbZN.png",
+    "id": "3905465e-bf07-403e-a400-b26dc097351d",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/945ed1ea-d1c4-43e9-8403-c2f93c7f4d39/playera-de-f%C3%BAtbol-brazil-essential-rlfbZN.png",
     "name": "Nike Brazil Essential",
     "price": 55.99,
     "sizes": [
@@ -112,7 +112,7 @@
   },
   {
     "id": "d3cd704d-2fa7-43ff-a9dd-8add229f2166",
-    "imageUrl": "https://assets.adidas.com/images/h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/7abe87e75d24481592fcce639aba307b_9366/Faux_Leather_Adicolor_3-Stripes_Baseball_Shirt_Green_IZ4047_23_hover_model.jpg",
+    "imageUrl": "https://assets.adidas.com/images/h_400,f_auto,q_auto,fl_lossy,c_fill,g_auto/7abe87e75d24481592fcce639aba307b_9366/Faux_Leather_Adicolor_3-Stripes_Baseball_Shirt_Green_IZ4047_23_hover_model.jpg",
     "name": "Adidas Faux Leather Adicolor 3-Stripes Baseball Shirt",
     "price": 60.99,
     "sizes": [
@@ -130,7 +130,7 @@
   },
   {
     "id": "15445658-d08a-477a-9bc7-4ce08f5ca7c1",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_500,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/15dc2e8d-84af-4698-aa5f-cbcb7044fd30/playera-tatum-T4b2vJ.png",
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_400,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/15dc2e8d-84af-4698-aa5f-cbcb7044fd30/playera-tatum-T4b2vJ.png",
     "name": "Nike Tatum",
     "price": 65.99,
     "sizes": [
@@ -146,7 +146,7 @@
   },
   {
     "id": "b178d13d-16e2-403b-b638-9e6f9a25482d",
-    "imageUrl": "https://assets.adidas.com/images/h_500,f_auto,q_auto,fl_lossy,c_fill,g_auto/f25674bcfd324137a776af65017ce68a_9366/Shmoofoil_Knit_Sweater_Gender_Neutral_Black_IC1879_21_model.jpg",
+    "imageUrl": "https://assets.adidas.com/images/h_400,f_auto,q_auto,fl_lossy,c_fill,g_auto/f25674bcfd324137a776af65017ce68a_9366/Shmoofoil_Knit_Sweater_Gender_Neutral_Black_IC1879_21_model.jpg",
     "name": "Adidas Shmoofoil Knit Sweater (Gender Neutral)",
     "price": 70.99,
     "sizes": [
@@ -164,7 +164,7 @@
   },
   {
     "id": "9e6f9a25482d-16e2-403b-b638-b178d13d",
-    "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/705977/01/fnd/PNA/fmt/png/Camiseta-alternativa-de-Chivas-f%C3%BAtbol-masculino-kit-24",
+    "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_400,h_400/global/705977/01/fnd/PNA/fmt/png/Camiseta-alternativa-de-Chivas-f%C3%BAtbol-masculino-kit-24",
     "name": "Camiseta Alternativa De Chivas Fútbol Masculino Kit 24",
     "price": 59.99,
     "sizes": [
@@ -180,7 +180,7 @@
   },
   {
     "id": "b1c47f2e-2a1f-4b8b-90d7-4a5b6d150678",
-    "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/625874/01/mod03/fnd/PNA/fmt/png/PUMA-HOOPS-x-CHEETOS%C2%AE-Long-Sleeve-Tee",
+    "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_400,h_400/global/625874/01/mod03/fnd/PNA/fmt/png/PUMA-HOOPS-x-CHEETOS%C2%AE-Long-Sleeve-Tee",
     "name": "Puma Hoops X Cheetos® Long Sleeve Tee",
     "price": 64.99,
     "sizes": [
@@ -195,7 +195,7 @@
   },
   {
     "id": "f3e9f7c3-9c8e-459d-bc47-3e1e15b9de00",
-    "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/625872/01/mod04/fnd/PNA/fmt/png/Playera-para-hombre-PUMA-HOOPS-x-CHEETOS-I",
+    "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_400,h_400/global/625872/01/mod04/fnd/PNA/fmt/png/Playera-para-hombre-PUMA-HOOPS-x-CHEETOS-I",
     "name": "Playera Para Hombre Puma Hoops X Cheetos I",
     "price": 59.99,
     "sizes": [
@@ -210,7 +210,7 @@
   },
   {
     "id": "a5e2f9a8-576d-44f1-8c98-2f8f76a9978a",
-    "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/623804/01/mod01/fnd/PNA/fmt/png/Playera-tipo-polo-estampada-para-hombre-Scuderia-Ferrari-Race-Motorsport",
+    "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_400,h_400/global/623804/01/mod01/fnd/PNA/fmt/png/Playera-tipo-polo-estampada-para-hombre-Scuderia-Ferrari-Race-Motorsport",
     "name": "Playera Tipo Polo Estampada Para Hombre Scuderia Ferrari Race Motorsport",
     "price": 74.99,
     "sizes": [
@@ -227,7 +227,7 @@
   },
   {
     "id": "c4d3eab2-7d6e-4f02-aa0a-ee3d2e4d2e4c",
-    "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/682209/01/mod04/fnd/PNA/fmt/png/PUMA-Graphics-Wording-Men's-Tee",
+    "imageUrl": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_400,h_400/global/682209/01/mod04/fnd/PNA/fmt/png/PUMA-Graphics-Wording-Men's-Tee",
     "name": "Puma Graphics Wording Men's Tee",
     "price": 49.99,
     "sizes": [
