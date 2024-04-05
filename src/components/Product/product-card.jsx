@@ -20,13 +20,13 @@ export const ProductCard = ({ product }) => {
         <p className="text-slate-500">R$ {product.price}</p>
         <div className='flex flex-col justify-end gap-2 h-32'>
           <span className='font-thin text-slate-500 text-xs'>Tamanhos Disponíveis</span>
-          <div className="flex flex-wrap">
+          <div className="flex">
             {product.sizes.map(size => (
               <span key={size} className="mr-2 h-5 w-5 border hover:border-2 hover:border-orange-500 rounded text-sm flex justify-center items-center text-slate-600">{size}</span>
             ))}
           </div>
           <span className='font-thin text-slate-500 text-xs'>Cores Disponíveis</span>
-          <div className="flex flex-wrap">
+          <div className="flex">
             {product.colors.map(color => (
               <span key={color} className={clsx('mr-2 h-5 w-5 border hover:border-2 hover:border-orange-500 rounded text-sm', colorMap[color.toString().toLowerCase()])}> </span>
             ))}
