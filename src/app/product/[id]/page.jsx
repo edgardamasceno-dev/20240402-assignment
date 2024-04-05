@@ -5,9 +5,9 @@ const Page = async (context) => {
     const { id } = context.params;
     const product = await getById(id);
     return (
-        <div className='my-4 mx-4'>
+        <section className='my-4 mx-4 w-full'>
             <ProductDetails product={product} />
-        </div>
+        </section>
     )
 }
 
