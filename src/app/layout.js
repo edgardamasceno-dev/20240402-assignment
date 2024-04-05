@@ -13,8 +13,8 @@ export const metadata = {
 const menuItems = [
   { href: '/', text: 'Home' },
   { href: '#maincontent', text: 'Principal' },
-  { href: '#about', text: 'Sobre nós' },
-  { href: '#contact', text: 'Contato' },
+  { href: '/', text: 'Sobre nós' },
+  { href: '/', text: 'Contato' },
 ];
 
 export default function RootLayout({ children, modal }) {
