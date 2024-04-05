@@ -11,7 +11,8 @@ export const metadata = {
 };
 
 const menuItems = [
-  { href: '/', text: 'Início' },
+  { href: '/', text: 'Home' },
+  { href: '#maincontent', text: 'Principal' },
   { href: '#about', text: 'Sobre nós' },
   { href: '#contact', text: 'Contato' },
 ];
