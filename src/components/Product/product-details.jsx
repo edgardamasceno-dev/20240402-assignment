@@ -31,7 +31,7 @@ export const ProductDetails = ({ product }) => {
     return (
         <div className="flex flex-col gap-2 min-w-[340px] w-full h-full mt-2">
             <div className="relative">
-                <Image src={product.imageUrl} alt={product.name} width={400} height={400} priority className='rounded-md w-full max-h-[55svh] object-cover' />
+                <Image loading='lazy' src={product.imageUrl} alt={product.name} width={400} height={400} className='rounded-md w-full max-h-[55svh] object-cover' />
                 <div className="absolute top-0 right-0 m-2">
                     {product.isFavourite ? <AiFillHeart className='w-6 h-6 text-orange-500' /> : <AiOutlineHeart className='w-6 h-6 text-orange-500' />}
                 </div>
