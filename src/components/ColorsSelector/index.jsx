@@ -40,7 +40,7 @@ export const ColorSelector = ({ colors, label, color = 'Nenhum', onColorChange }
           {" "}{selectedColor !== 'nenhum' ? colorNameMap[selectedColor] || selectedColor : 'Nenhum'}
         </span>
       </p>
-      <div className="flex space-x-2">
+      <div className="flex space-x-1">
         {colors.map((color) => (
           <button
             key={color}

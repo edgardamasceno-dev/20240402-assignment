@@ -4,8 +4,21 @@ import Link from 'next/link';
 import { AiFillHeart, AiOutlineArrowLeft, AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
 
 export const ProductDetails = ({ product }) => {
-
-    if (!product) return <div>Loading...</div>;
+    if (!product) {
+        return (
+            <div className="mt-12 flex flex-col justify-center items-center md:h-[50vh]">
+                <h2 className="text-xl md:text-3xl font-semibold text-slate-600">
+                    Produto não encontrado
+                </h2>
+                <p className="text-md md:text-xl text-slate-400 mt-2">
+                    O produto que você está procurando não existe ou não está mais disponível.
+                </p>
+                <Link href="/" className="mt-4 text-sm rounded border border-orange-500 text-orange-500 px-4 py-2 hover:bg-orange-500 hover:text-white transition-colors">
+                    Voltar à página inicial
+                </Link>
+            </div>
+        );
+    }
 
     const colorMap = {
         preto: 'bg-black',

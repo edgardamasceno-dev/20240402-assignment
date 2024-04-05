@@ -4,7 +4,7 @@ import { ProductList } from "@/components/Product";
 import { Suspense } from 'react';
 export default async function Home(request) {
   const { name, color, size, price } = request.searchParams;
-  const data = await list();
+  const data = await list({ name, color, size, price });
   return (
     <main className="flex flex-col items-center justify-between py-4 px-0">
       <Filter

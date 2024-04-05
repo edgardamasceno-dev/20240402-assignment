@@ -14,6 +14,18 @@ const nextConfig = {
                 port: '',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'images.puma.com',
+                port: '',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'reebok.ca',
+                port: '',
+                pathname: '/**',
+            },
         ],
     },
 };

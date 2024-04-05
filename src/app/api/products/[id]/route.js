@@ -1,13 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-
-const productsFilePath = path.join(process.cwd(), 'src', 'data', 'products.json');
+'use server';
+import { getById } from '@/actions/products';
 
 export async function GET(request, context) {
     const { id } = context.params;
 
-    const productsData = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
-    const product = productsData.find(product => product.id === id);
+    const product = await getById(id);
 
     if (!product) {
         return new Response(JSON.stringify({ error: 'Product not found' }), {

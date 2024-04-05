@@ -20,22 +20,29 @@ export const Filter = ({
     const [name, setName] = useState(currentName);
     const [size, setSize] = useState(currentSize);
     const [color, setColor] = useState(currentColor);
-    const [price, setPrice] = useState(currentPrice === Infinity ? maxPrice : currentPrice);
+    const [price, setPrice] = useState(currentPrice !== Infinity ? currentPrice : (maxPrice !== Infinity ? maxPrice : ''));
+    const [isFirstLoad, setIsFirstLoad] = useState(true);
     const router = useRouter();
 
     useEffect(() => {
-        const queryParams = new URLSearchParams({
-            name,
-            color: color === 'Nenhum' ? '' : color,
-            size: size === 'Nenhum' ? '' : size,
-            price: price === Infinity ? '' : price.toString(),
-        }).toString();
-        router.push(`/?${queryParams}`, undefined, { shallow: true });
+        if (isFirstLoad) {
+            setIsFirstLoad(false);
+            return;
+        }
+
+        const queryParams = new URLSearchParams();
+
+        if (name) queryParams.set('name', name);
+        if (color && color !== 'Nenhum') queryParams.set('color', color);
+        if (size && size !== 'Nenhum') queryParams.set('size', size);
+        if (price && price !== Infinity) queryParams.set('price', price.toString());
+
+        router.push(`/?${queryParams.toString()}`, undefined, { shallow: true });
     }, [name, size, color, price, router]);
 
     return (
         <div className="container mx-auto border-b-[1px] border-slate-200">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
                 <div className="p-4">
                     <Autocomplete
                         items={names || []}
@@ -49,7 +56,7 @@ export const Filter = ({
                         label="Preço Máximo:"
                         min={Math.ceil(minPrice)}
                         max={Math.ceil(maxPrice)}
-                        current={Math.ceil(price)}
+                        current={price}
                         onRangeChange={(newPrice) => setPrice(newPrice)}
                     />
                 </div>

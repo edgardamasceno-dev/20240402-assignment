@@ -1,0 +1,21 @@
+name: Trigger URL on Push or Merge to Main
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  triggerURL:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if PR is merged
+        if: github.event.pull_request.merged == true
+        run: echo "PR was merged."
+      - name: Get request to URL
+        run: curl -X GET "http://167.99.176.118:3000/api/box/deploy/1e51e88f2f3f8f385a4a"
+        if: (github.event_name == 'push') || (github.event.pull_request.merged == true)
