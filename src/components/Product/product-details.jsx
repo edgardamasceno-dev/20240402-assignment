@@ -13,7 +13,7 @@ export const ProductDetails = ({ product }) => {
                 <p className="text-md md:text-xl text-slate-400 mt-2">
                     O produto que você está procurando não existe ou não está mais disponível.
                 </p>
-                <Link href="/" className="mt-4 text-sm rounded border border-orange-500 text-orange-500 px-4 py-2 hover:bg-orange-500 hover:text-white transition-colors">
+                <Link prefetch href="/" className="mt-4 text-sm rounded border border-orange-500 text-orange-500 px-4 py-2 hover:bg-orange-500 hover:text-white transition-colors">
                     Voltar à página inicial
                 </Link>
             </div>
@@ -59,7 +59,7 @@ export const ProductDetails = ({ product }) => {
                         </div>
                     </div>
                     <div className='mt-2 pt-2 border-t-[1px] border-slate-100 flex flex-col-reverse lg:flex-row gap-2'>
-                        <Link href="/">
+                        <Link prefetch href="/">
                             <div className="w-full text-sm rounded border-[2px] border-orange-500 text-orange-500 px-4 py-2 flex items-center justify-center cursor-pointer hover:border-orange-600 hover:text-orange-600 box-border" >
                                 <AiOutlineArrowLeft className='mr-2 w-6 h-6' />
                                 Voltar

@@ -15,8 +15,11 @@ export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...
     const [filteredItems, setFilteredItems] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
     const wrapperRef = useRef(null);
+    const debouncedOnTextChange = useRef();
 
-    const debouncedOnTextChange = useRef(debounce(onTextChange, 1000)).current;
+    useEffect(() => {
+        debouncedOnTextChange.current = debounce(onTextChange, 1000);
+    }, [onTextChange]);
 
     useEffect(() => {
         if (!inputValue.trim()) {
@@ -32,7 +35,9 @@ export const Autocomplete = ({ items, label, text = '', placeholder = 'Buscar...
     }, [inputValue, items]);
 
     useEffect(() => {
-        debouncedOnTextChange(inputValue);
+        if (debouncedOnTextChange.current) {
+            debouncedOnTextChange.current(inputValue);
+        }
     }, [inputValue]);
 
     const handleResetClick = () => {

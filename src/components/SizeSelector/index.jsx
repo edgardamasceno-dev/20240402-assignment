@@ -8,7 +8,7 @@ export const SizeSelector = ({ sizes, label, size = 'Nenhum', onSizeChange }) =>
 
     useEffect(() => {
         setSelectedSize(size.toLowerCase());
-        setDisplaySize(size.toUpperCase());
+        setDisplaySize(size === 'Nenhum' ? size : size.toUpperCase());
     }, [size]);
 
     const handleSizeChange = (selectedSize) => {

@@ -21,24 +21,20 @@ export const Filter = ({
     const [size, setSize] = useState(currentSize);
     const [color, setColor] = useState(currentColor);
     const [price, setPrice] = useState(currentPrice !== Infinity ? currentPrice : (maxPrice !== Infinity ? maxPrice : ''));
-    const [isFirstLoad, setIsFirstLoad] = useState(true);
     const router = useRouter();
 
     useEffect(() => {
-        if (isFirstLoad) {
-            setIsFirstLoad(false);
-            return;
-        }
-
         const queryParams = new URLSearchParams();
 
         if (name) queryParams.set('name', name);
         if (color && color !== 'Nenhum') queryParams.set('color', color);
         if (size && size !== 'Nenhum') queryParams.set('size', size);
         if (price && price !== Infinity) queryParams.set('price', price.toString());
+        if (!(name === currentName && size === currentSize && color === currentColor && (price === currentPrice || (currentPrice === Infinity && price === '')))) {
+            router.push(`/?${queryParams.toString()}`, undefined, { shallow: true });
+        }
+    }, [name, size, color, price, router, currentName, currentSize, currentColor, currentPrice]);
 
-        router.push(`/?${queryParams.toString()}`, undefined, { shallow: true });
-    }, [name, size, color, price, router]);
 
     return (
         <div className="container mx-auto border-b-[1px] border-slate-200">

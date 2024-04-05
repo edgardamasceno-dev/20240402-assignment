@@ -9,10 +9,7 @@ const Page = (context) => {
     const { id } = context.params;
     return (
         <div className='my-4 mx-4'>
-            <Modal visible={true}
-                onClose={() => {
-                    router.back()
-                }}>
+            <Modal>
                 <ProductDetailsWrapper id={id} />
             </Modal>
         </div>

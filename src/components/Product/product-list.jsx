@@ -11,7 +11,7 @@ export const ProductList = ({ products }) => {
                 <p className="text-md md:text-xl text-slate-400 mt-2">
                     Tente ajustar os filtros para descobrir mais opções.
                 </p>
-                <Link href="/" className="mt-4 text-sm rounded border border-orange-500 text-orange-500 px-4 py-2 hover:bg-orange-500 hover:text-white transition-colors">
+                <Link prefetch href="/" className="mt-4 text-sm rounded border border-orange-500 text-orange-500 px-4 py-2 hover:bg-orange-500 hover:text-white transition-colors">
                     Limpar Filtros
                 </Link>
             </div>
@@ -21,7 +21,7 @@ export const ProductList = ({ products }) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {products.map(product => (
-                <Link href={`/product/${product.id}`} key={product.id} passHref>
+                <Link prefetch href={`/product/${product.id}`} key={product.id} passHref>
                     <ProductCard product={product} />
                 </Link>
             ))}
