@@ -16,6 +16,7 @@ export default async function Home(request) {
         currentSize={size || 'Nenhum'}
         minPrice={data.minPrice || 0}
         maxPrice={data.maxPrice || 999}
+        currentPrice={price || data.maxPrice || 999}
       />
       <Suspense fallback={<h1>Carregando lista de produtos...</h1>}>
         <ProductList products={data.products} />
