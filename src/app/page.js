@@ -6,7 +6,7 @@ export default async function Home(request) {
   const { name, color, size, price } = request.searchParams;
   const data = await list({ name, color, size, price });
   return (
-    <main className="flex flex-col items-center justify-between py-4 px-0">
+    <section className="flex flex-col items-center justify-between py-4 px-0">
       <Filter
         names={data.names}
         currentName={name || ''}
@@ -21,6 +21,6 @@ export default async function Home(request) {
       <Suspense fallback={<h1>Carregando lista de produtos...</h1>}>
         <ProductList products={data.products} />
       </Suspense>
-    </main>
+    </section>
   );
 }

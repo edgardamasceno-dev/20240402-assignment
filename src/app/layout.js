@@ -21,7 +21,7 @@ export default function RootLayout({ children, modal }) {
     <html lang="pt-BR">
       <body className={inter.className + " flex flex-col min-w-full min-h-screen bg-slate-50"}>
         <Navbar menuItems={menuItems} />
-        <main className="max-w-[960px] mx-auto flex-1">
+        <main id="maincontent" className="max-w-[960px] mx-auto flex-1">
           {modal}
           {children}
         </main>
