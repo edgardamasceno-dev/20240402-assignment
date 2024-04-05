@@ -1,3 +1,4 @@
+import { useState } from 'react';
 export const Range = ({ label, min, max, current = Infinity, onRangeChange }) => {
     const [value, setValue] = useState(current === Infinity ? max : current);
 
@@ -23,7 +24,7 @@ export const Range = ({ label, min, max, current = Infinity, onRangeChange }) =>
                 onChange={handleChange}
                 onMouseUp={handleFinalChange}
                 onKeyUp={handleFinalChange}
-                onTouchEnd={handleFinalChange}
+                onTouchEnd={handleFinalChange} // Adicionado para tratar eventos de toque
                 className="appearance-none bg-transparent ..."
                 id="range"
             />
