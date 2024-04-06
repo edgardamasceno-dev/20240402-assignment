@@ -4,7 +4,7 @@ import { ProductCard } from './';
 export const ProductList = ({ products }) => {
     if (!products || products.length === 0) {
         return (
-            <div className="mt-12 flex flex-col justify-center items-center md:h-[50vh]">
+            <div className="flex flex-col flex-1 justify-center items-center min-w-full">
                 <h2 className="text-xl md:text-3xl font-semibold text-slate-600">
                     Nenhum produto encontrado
                 </h2>
@@ -19,13 +19,12 @@ export const ProductList = ({ products }) => {
     }
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 py-4 px-4 min-w-full">
             {products.map((product, index) => (
                 <Link prefetch={false} href={`/product/${product.id}`} key={product.id} passHref>
-                    <ProductCard product={product} priority={index < 1} />
+                    <ProductCard product={product} priority={index < 4} />
                 </Link>
             ))}
         </div>
-
     );
 };

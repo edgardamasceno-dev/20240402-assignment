@@ -31,7 +31,7 @@ export const ProductDetails = ({ product }) => {
     return (
         <div className="flex flex-col gap-2 min-w-[340px] w-full h-full mt-2">
             <div className="relative">
-                <Image priority={true} src={product.imageUrl} alt={product.name} width={400} height={400} className='rounded-md w-full max-h-[55svh] object-cover' />
+                <Image priority={true} src={product.imageUrl} alt={product.name} width={600} height={600} className='rounded-md w-full max-h-[55svh] object-cover' />
                 <div className="absolute top-0 right-0 m-2">
                     {product.isFavourite ? <AiFillHeart className='w-6 h-6 text-violet-800' /> : <AiOutlineHeart className='w-6 h-6 text-violet-800' />}
                 </div>
@@ -46,7 +46,7 @@ export const ProductDetails = ({ product }) => {
                         <h3 className="font-light text-sm text-slate-500 mb-2">Tamanhos Disponíveis</h3>
                         <div className="flex space-x-2">
                             {product.sizes.map(size => (
-                                <span key={size} className="mr-2 h-7 w-7 border hover:border-2 hover:border-violet-800 rounded text-sm text-slate-600 flex justify-center items-center">{size}</span>
+                                <span key={size} className="h-7 w-7 border hover:border-2 hover:border-violet-800 rounded text-sm text-slate-600 flex justify-center items-center">{size}</span>
                             ))}
                         </div>
                     </div>
@@ -54,7 +54,7 @@ export const ProductDetails = ({ product }) => {
                         <h3 className="font-light text-sm text-slate-500 mb-2">Cores Disponíveis</h3>
                         <div className="flex space-x-2">
                             {product.colors.map(color => (
-                                <span key={color} className={clsx('mr-2 h-7 w-7 border hover:border-2 hover:border-violet-800 rounded text-sm', colorMap[color.toString().toLowerCase()])}> </span>
+                                <span key={color} className={clsx('h-7 w-7 border hover:border-2 hover:border-violet-800 rounded text-sm', colorMap[color.toString().toLowerCase()])}> </span>
                             ))}
                         </div>
                     </div>

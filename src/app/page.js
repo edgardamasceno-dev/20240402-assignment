@@ -6,7 +6,7 @@ export default async function Home(request) {
   const { name, color, size, price } = request.searchParams;
   const data = await list({ name, color, size, price });
   return (
-    <section className="flex flex-col items-center justify-between py-4 px-0">
+    <section className="flex flex-col items-center min-w-full">
       <Filter
         names={data.names}
         currentName={name || ''}

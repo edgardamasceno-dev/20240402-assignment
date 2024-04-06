@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 export const Footer = ({ children, companyName, companyUrl }) => {
     return (
-        <footer className="bg-gray-800 text-white py-8">
-            <div className="max-w-screen-lg mx-auto px-4">
+        <footer className="bg-gray-800 text-white py-4">
+            <div className="max-w-screen-lg mx-auto">
                 {children}
-                <div className="text-center pt-4">
+                <div className="text-center">
                     <Link
                         prefetch
                         href={companyUrl}

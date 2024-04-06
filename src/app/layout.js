@@ -18,16 +18,16 @@ export const metadata = {
 const menuItems = [
   { href: '/', text: 'Home' },
   { href: '#maincontent', text: 'Principal' },
-  { href: '/', text: 'Sobre nós' },
-  { href: '/', text: 'Contato' },
+  { href: '/about', text: 'Sobre nós' },
+  { href: '/contact', text: 'Contato' },
 ];
 
 export default function RootLayout({ children, modal }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className + " flex flex-col min-w-full min-h-screen bg-slate-50"}>
+      <body className={inter.className + " flex flex-col min-w-full min-h-svh bg-slate-50"}>
         <Navbar menuItems={menuItems} />
-        <main id="maincontent" className="max-w-[960px] mx-auto flex-1">
+        <main id="maincontent" className="mx-auto flex flex-1 w-full">
           {modal}
           {children}
         </main>

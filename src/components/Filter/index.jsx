@@ -37,7 +37,7 @@ export const Filter = ({
 
 
     return (
-        <div className="container mx-auto border-b-[1px] border-slate-200">
+        <section className="border-b-[1px] border-slate-200 w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
                 <div className="p-4">
                     <Autocomplete
@@ -73,6 +73,6 @@ export const Filter = ({
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
