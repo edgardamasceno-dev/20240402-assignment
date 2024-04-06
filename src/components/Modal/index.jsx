@@ -27,8 +27,8 @@ export const Modal = ({ children }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 flex justify-center items-center z-50" onClick={handleClose}>
-            <div className="bg-violet-800 bg-opacity-30 backdrop-blur-sm max-h-svh max-w-full hidden md:block md:absolute inset-0" aria-hidden="true"></div>
+        <div className="fixed inset-0 flex justify-center items-center z-50 min-w-full min-h-svh" onClick={handleClose}>
+            <div className="bg-violet-800 bg-opacity-30 backdrop-blur-sm min-h-svh min-w-full hidden md:block md:absolute inset-0" aria-hidden="true"></div>
             <div className="z-10 bg-white p-2 w-full h-screen md:w-[40vw] md:min-w-[360px] md:h-fit md:rounded-lg md:shadow-lg" onClick={e => e.stopPropagation()}>
                 <div className='w-full flex justify-end'>
                     <IoCloseOutline className='h-6 w-6 cursor-pointer text-slate-400 hover:text-violet-800' onClick={handleClose} />
