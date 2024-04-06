@@ -17,5 +17,5 @@ jobs:
         if: github.event.pull_request.merged == true
         run: echo "PR was merged."
       - name: Get request to URL
-        run: curl -X GET "http://167.99.176.118:3000/api/box/deploy/6efba24b8e22faf52055"
+        run: curl -X GET ${{ secrets.DEPLOY_URL_FOR_ASSIGNMENT_20240402 }}
         if: (github.event_name == 'push') || (github.event.pull_request.merged == true)
