@@ -22,7 +22,7 @@ export const ProductList = ({ products }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 py-4 px-4 min-w-full">
             {products.map((product, index) => (
                 <Link prefetch={false} href={`/product/${product.id}`} key={product.id} passHref>
-                    <ProductCard product={product} priority={index < 4} />
+                    <ProductCard product={product} priority={index < 1} />
                 </Link>
             ))}
         </div>
