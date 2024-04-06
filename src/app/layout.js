@@ -25,7 +25,7 @@ const menuItems = [
 export default function RootLayout({ children, modal }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className + " flex flex-col min-w-full min-h-svh bg-slate-50"}>
+      <body className={inter.className + " flex flex-col min-w-full min-h-[100svh] bg-slate-50"}>
         <Navbar menuItems={menuItems} />
         <main id="maincontent" className="mx-auto flex flex-1 w-full">
           {modal}
@@ -33,6 +33,6 @@ export default function RootLayout({ children, modal }) {
         </main>
         <Footer companyName="Camisetei Store" companyUrl="/" />
       </body>
-    </html>
+    </html >
   );
 }

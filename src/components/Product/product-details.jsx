@@ -6,7 +6,7 @@ import { AiFillHeart, AiOutlineArrowLeft, AiOutlineHeart, AiOutlineShoppingCart 
 export const ProductDetails = ({ product }) => {
     if (!product) {
         return (
-            <div className="mt-12 flex flex-col justify-center items-center md:h-[50vh]">
+            <div className="mt-12 flex flex-col justify-center items-center">
                 <h2 className="text-xl md:text-3xl font-semibold text-slate-600">
                     Produto não encontrado
                 </h2>

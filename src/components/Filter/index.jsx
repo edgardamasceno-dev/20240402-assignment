@@ -37,42 +37,32 @@ export const Filter = ({
 
 
     return (
-        <section className="border-b-[1px] border-slate-200 w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
-                <div className="p-4">
-                    <Autocomplete
-                        items={names || []}
-                        label="Pesquisar Nome:"
-                        text={name}
-                        onTextChange={(newName) => setName(newName)}
-                    />
-                </div>
-                <div className="p-4">
-                    <Range
-                        label="Preço Máximo:"
-                        min={Math.ceil(minPrice)}
-                        max={Math.ceil(maxPrice)}
-                        current={price}
-                        onRangeChange={(newPrice) => setPrice(newPrice)}
-                    />
-                </div>
-                <div className="p-4">
-                    <ColorSelector
-                        label="Selecione uma Cor:"
-                        colors={colors}
-                        color={color}
-                        onColorChange={(newColor) => setColor(newColor)}
-                    />
-                </div>
-                <div className="p-4">
-                    <SizeSelector
-                        label="Escolha o tamanho:"
-                        sizes={sizes}
-                        size={size}
-                        onSizeChange={(newSize) => setSize(newSize)}
-                    />
-                </div>
-            </div>
+        <section className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-2 gap-x-2 md:gap-x-4 lg:gap-6 w-full border-b-[1px] border-slate-200">
+            <Autocomplete
+                items={names || []}
+                label="Pesquisar Nome:"
+                text={name}
+                onTextChange={(newName) => setName(newName)}
+            />
+            <Range
+                label="Preço Máximo:"
+                min={Math.ceil(minPrice)}
+                max={Math.ceil(maxPrice)}
+                current={price}
+                onRangeChange={(newPrice) => setPrice(newPrice)}
+            />
+            <ColorSelector
+                label="Selecione uma Cor:"
+                colors={colors}
+                color={color}
+                onColorChange={(newColor) => setColor(newColor)}
+            />
+            <SizeSelector
+                label="Escolha o tamanho:"
+                sizes={sizes}
+                size={size}
+                onSizeChange={(newSize) => setSize(newSize)}
+            />
         </section>
     );
 };

@@ -76,6 +76,7 @@ Isso iniciará o servidor local e geralmente estará acessível através de http
 
 Agora, você deve ser capaz de ver a aplicação rodando localmente. Explore as funcionalidades e as páginas desenvolvidas conforme as especificações do teste.
 
-https://assignments-20240402-assignment.qcnm7k.easypanel.host/product/ba0f57e9-00aa-4d2a-a148-7646ed9ad35c
 
+https://pagespeed.web.dev/analysis/https-assignments-20240402-assignment-qcnm7k-easypanel-host/7jzisoep25?form_factor=mobile
 
+https://pagespeed.web.dev/analysis/https-assignments-20240402-assignment-qcnm7k-easypanel-host-product-ba0f57e9-00aa-4d2a-a148-7646ed9ad35c/5bgvc6m836?form_factor=mobile

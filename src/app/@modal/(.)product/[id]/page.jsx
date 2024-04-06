@@ -8,7 +8,7 @@ const Page = (context) => {
     const router = useRouter()
     const { id } = context.params;
     return (
-        <div className='my-4 mx-4'>
+        <div className='overflow-hidden'>
             <Modal>
                 <ProductDetailsWrapper id={id} />
             </Modal>
