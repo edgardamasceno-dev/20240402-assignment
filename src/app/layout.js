@@ -5,7 +5,7 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  weights: ["300", "400", "600"],
+  weights: ["400"],
   styles: ["normal"],
   display: "swap",
 });
