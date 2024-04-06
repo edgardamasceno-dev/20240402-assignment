@@ -1,21 +1,26 @@
 import { clsx } from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiFillHeart, AiOutlineArrowLeft, AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiFillHeart, AiOutlineArrowLeft, AiOutlineHeart, AiOutlineHome, AiOutlineShoppingCart } from "react-icons/ai";
 
 export const ProductDetails = ({ product }) => {
     if (!product) {
         return (
-            <div className="mt-12 flex flex-col justify-center items-center">
-                <h2 className="text-xl md:text-3xl font-semibold text-slate-600">
-                    Produto não encontrado
-                </h2>
-                <p className="text-md md:text-xl text-slate-400 mt-2">
-                    O produto que você está procurando não existe ou não está mais disponível.
-                </p>
-                <Link prefetch href="/" className="mt-4 text-sm rounded border border-violet-800 text-violet-800 px-4 py-2 hover:bg-violet-800 hover:text-white transition-colors">
-                    Voltar à página inicial
-                </Link>
+            <div className="flex flex-col flex-1 justify-center items-center min-w-full">
+                <div className='min-h-40 flex flex-col justify-between items-center'>
+                    <div>
+                        <h2 className="text-xl md:text-3xl text-center font-semibold text-slate-600">
+                            Produto não encontrado
+                        </h2>
+                        <p className="text-md text-center text-slate-400 mt-2">
+                            O produto que você está procurando não existe ou não está mais disponível.
+                        </p>
+                    </div>
+                    <Link prefetch href={{ pathname: "/" }} className="text-md font-semibold flex items-center gap-2 mt-4 text-sm rounded border border-violet-800 text-violet-800 px-4 py-2 hover:bg-violet-800 hover:text-white transition-colors">
+                        Voltar à página inicial
+                        <AiOutlineHome className='h-5 w-5' />
+                    </Link>
+                </div>
             </div>
         );
     }
@@ -59,7 +64,7 @@ export const ProductDetails = ({ product }) => {
                         </div>
                     </div>
                     <div className='mt-2 pt-2 border-t-[1px] border-slate-100 flex flex-col-reverse lg:flex-row gap-2'>
-                        <Link prefetch href="/">
+                        <Link prefetch href={{ pathname: "/" }}>
                             <div className="w-full text-sm rounded border-[2px] border-violet-800 text-violet-800 px-4 py-2 flex items-center justify-center cursor-pointer hover:border-violet-800 hover:text-violet-800 box-border" >
                                 <AiOutlineArrowLeft className='mr-2 w-6 h-6' />
                                 Voltar

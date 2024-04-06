@@ -8,7 +8,7 @@ export const Footer = ({ children, companyName, companyUrl }) => {
                 <div className="text-center">
                     <Link
                         prefetch
-                        href={companyUrl}
+                        href={{ pathname: companyUrl }}
                         rel="noopener noreferrer"
                         className="text-white hover:text-gray-400 transition-colors duration-300"
                     >
