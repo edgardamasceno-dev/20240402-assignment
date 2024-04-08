@@ -21,8 +21,8 @@ export const ProductCard = ({ product, priority = false }) => {
         blurDataURL={'/thumbnails/' + product.imageUrl}
         alt={product.name}
         className="w-full h-80 object-cover"
-        width={800}
-        height={800}
+        width={500}
+        height={500}
       />
       <div className="p-4 flex flex-col">
         <h4 className="text-md text-slate-700 font-bold whitespace-nowrap truncate capitalize">{product.name.toString()}</h4>

@@ -42,8 +42,8 @@ export const ProductDetails = ({ product }) => {
                     placeholder="blur"
                     blurDataURL={'/thumbnails/' + product.imageUrl}
                     alt={product.name}
-                    width={800}
-                    height={800}
+                    width={500}
+                    height={500}
                     className='rounded-md w-full max-h-[55svh] object-cover' />
                 <div className="absolute top-0 right-0 m-2">
                     {product.isFavourite ? <AiFillHeart className='w-6 h-6 text-violet-800' /> : <AiOutlineHeart className='w-6 h-6 text-violet-800' />}
