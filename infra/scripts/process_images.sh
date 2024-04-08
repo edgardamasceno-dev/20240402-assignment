@@ -4,7 +4,7 @@
 install_dependencies() {
     echo "Instalando dependências necessárias..."
     if [ "${OS}" = "Linux" ]; then
-        sudo apt-get update && sudo apt-get install -y jq wget imagemagick
+        apt update && apt install -y jq wget imagemagick
     elif [ "${OS}" = "macOS" ]; then
         brew install jq wget imagemagick coreutils
     fi
