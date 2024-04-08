@@ -36,7 +36,15 @@ export const ProductDetails = ({ product }) => {
     return (
         <div className="flex flex-col gap-2 min-w-[340px] w-full h-full mt-2">
             <div className="relative">
-                <Image priority={true} src={product.imageUrl} alt={product.name} width={400} height={400} className='rounded-md w-full max-h-[55svh] object-cover' />
+                <Image
+                    priority={true}
+                    src={'/images/' + product.imageUrl}
+                    placeholder="blur"
+                    blurDataURL={'/thumbnails/' + product.imageUrl}
+                    alt={product.name}
+                    width={800}
+                    height={800}
+                    className='rounded-md w-full max-h-[55svh] object-cover' />
                 <div className="absolute top-0 right-0 m-2">
                     {product.isFavourite ? <AiFillHeart className='w-6 h-6 text-violet-800' /> : <AiOutlineHeart className='w-6 h-6 text-violet-800' />}
                 </div>

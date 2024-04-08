@@ -14,7 +14,16 @@ export const ProductCard = ({ product, priority = false }) => {
 
   return (
     <div className="border border-slate-200 rounded-lg overflow-hidden shadow-slate-200 shadow-md hover:shadow-lg hover:scale-[1.01] cursor-pointer">
-      <Image priority={priority} src={product.imageUrl} alt={product.name} className="w-full h-80 object-cover" width={400} height={400} />
+      <Image
+        priority={priority}
+        src={'/images/' + product.imageUrl}
+        placeholder="blur"
+        blurDataURL={'/thumbnails/' + product.imageUrl}
+        alt={product.name}
+        className="w-full h-80 object-cover"
+        width={800}
+        height={800}
+      />
       <div className="p-4 flex flex-col">
         <h4 className="text-md text-slate-700 font-bold whitespace-nowrap truncate capitalize">{product.name.toString()}</h4>
         <p className="text-slate-500">R$ {product.price}</p>

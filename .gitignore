@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# image folders
+./public/images
+./public/thumbnails
+
+# products data
+./src/data/products.json
