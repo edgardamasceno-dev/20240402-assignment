@@ -1,33 +1,33 @@
 #!/bin/bash
 
-# Verifica se o wget está instalado, se não, tenta instalá-lo
+# ⚙️ Verifica se o wget está instalado, se não, tenta instalá-lo
 if ! command -v wget &> /dev/null; then
     echo "wget não encontrado. Tentando instalar..."
     apt update -y
     apt install -y wget
 fi
 
-# Atualiza o sistema e instala dependências necessárias
+# ⚙️ Atualiza o sistema e instala dependências necessárias
 apt update -y
 apt install -y build-essential libpcre3 libpcre3-dev zlib1g-dev libssl-dev libtool cmake git wget brotli libbrotli-dev
 
-# Verificar se usuário e grupo nginx existem, senão cria
+# ⚙️ Verificar se usuário e grupo nginx existem, senão cria
 if ! id "nginx" &>/dev/null; then
     groupadd -r nginx
     useradd -r -g nginx -s /bin/false nginx
 fi
 
-# Definindo variáveis
+# ⚙️ Definindo variáveis
 NGINX_VERSION="1.24.0"
 BROTLI_GIT="https://github.com/google/ngx_brotli.git"
 NGINX_SOURCE="http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz"
 NGINX_CONF_DIR="/etc/nginx"
 
-# Baixando e descompactando o código-fonte do Nginx
+# ⚙️ Baixando e descompactando o código-fonte do Nginx
 echo "Baixando Nginx versão $NGINX_VERSION..."
 wget -qO- $NGINX_SOURCE | tar -zxv || { echo "Falha ao baixar e descompactar o Nginx"; exit 1; }
 
-# Entra no diretório do Nginx
+# ⚙️ Entra no diretório do Nginx
 NGINX_DIR="nginx-$NGINX_VERSION"
 cd "$NGINX_DIR" || { echo "Diretório do Nginx não encontrado"; exit 1; }
 
@@ -94,6 +94,9 @@ fi
 # Adiciona o Brotli ao config
 sed -i '/include \/etc\/nginx\/modules-enabled\/\*.conf;/a load_module modules/ngx_http_brotli_filter_module.so;\nload_module modules/ngx_http_brotli_static_module.so;' /etc/nginx/nginx.conf
 
+# Desativa a exibição da versao do Ngins
+sudo sed -i '/http {/a \\tserver_tokens off;' /etc/nginx/nginx.conf && echo "✅ Versão do Nginx ocultada."
+
 echo "Configuração dos módulos completada."
 
 # Cria pastas de cache do nginx
@@ -106,4 +109,3 @@ mkdir -p /var/cache/nginx/scgi_temp
 # Substitua 'www-data' pelo usuário do Nginx no seu sistema, se for diferente.
 chown -R www-data:www-data /var/cache/nginx
 chmod 700 /var/cache/nginx/*
-

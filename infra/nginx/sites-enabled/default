@@ -1,0 +1,67 @@
+server {
+    # Configurações de Segurança
+
+    # Protege contra clickjacking ao permitir que conteúdos sejam emoldurados apenas pela mesma origem
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    
+    # Previne o navegador de interpretar arquivos com um MIME type diferente do declarado pelo servidor
+    add_header X-Content-Type-Options "nosniff" always;
+    
+    # Controla como informações de referência são passadas entre sites durante a navegação
+    add_header Referrer-Policy "no-referrer-when-downgrade" always;
+    
+    # Força a comunicação segura (HTTPS) por um período de tempo, incluindo todos os subdomínios
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+    
+    # Define a política de segurança de conteúdo, ajudando a prevenir ataques de XSS e injeção de dados
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; object-src 'none';" always;
+
+    # Configurações de Compressão
+
+    # Habilita a compressão Brotli para tipos de conteúdo específicos, melhorando a eficiência na transferência de dados
+    brotli on;
+    brotli_comp_level 11;
+    brotli_static on;
+    brotli_types text/plain text/css application/javascript application/json image/svg+xml application/xml+rss application/atom+xml text/javascript;
+
+    # Habilita a compressão GZIP, uma alternativa ao Brotli, para tipos de conteúdo específicos
+    gzip on;
+    gzip_disable "msie6";
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 9;
+    gzip_buffers 16 8k;
+    gzip_http_version 1.1;
+    gzip_min_length 256;
+    gzip_types application/atom+xml application/geo+json application/javascript application/x-javascript application/json application/ld+json application/manifest+json application/rdf+xml application/rss+xml application/xhtml+xml application/xml font/eot font/otf font/ttf image/svg+xml text/css text/javascript text/plain text/xml;
+
+    # Configurações de Serviço de Arquivos Estáticos
+
+    # Configura o servidor para servir arquivos estáticos diretamente, com cache de longa duração, para melhorar a performance
+    location /_next/static/ {
+        alias /code/.next/static/;
+        expires 1y;
+        add_header Cache-Control "public, max-age=31536000";
+        access_log off; # Desabilita logs de acesso para arquivos estáticos, melhorando a performance e privacidade
+    }
+
+    # Configurações de Proxy para Next.js
+
+    # Proxy pass para o servidor Next.js, com configurações para manter a funcionalidade completa e segurança
+    location / {
+        proxy_pass http://localhost:3000; # Encaminha requisições para o servidor Next.js
+        proxy_http_version 1.1; # Utiliza HTTP/1.1
+        proxy_set_header Upgrade $http_upgrade; # Suporte a WebSockets
+        proxy_set_header Connection "upgrade"; # Suporte a WebSockets
+        proxy_set_header Host $host; # Preserva o cabeçalho Host
+        proxy_cache_bypass $http_upgrade; # Evita cache quando há upgrade para WebSockets
+
+        # Remove o cabeçalho X-Powered-By para ocultar a tecnologia usada (Next.js)
+        proxy_set_header X-Powered-By "";
+
+        # Preserva informações do cliente real para análise e segurança
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
