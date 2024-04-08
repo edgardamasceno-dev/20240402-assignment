@@ -36,8 +36,8 @@ yarn-error.log*
 next-env.d.ts
 
 # image folders
-./public/images
-./public/thumbnails
+public/images
+public/thumbnails
 
 # products data
-./src/data/products.json
+src/data/products.json
